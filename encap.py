@@ -16,11 +16,17 @@ class Private:
         #use double underscore to access private variable
     def setPrivate(self, private):
         self.__privatVar = private
+    def setProtected(self):
+        def __init__(self):
+            self._protectedVar = 0
     
 obj = Private()
 obj.getPrivate()
 #reset variable to 12
 obj.setPrivate(12)
 obj.getPrivate()
+obj = Private()
+obj._protectedVar = 100
+print(obj._protectedVar)
 
 #program prints 5, then new variable 12
