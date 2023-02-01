@@ -16,18 +16,21 @@ class Human():
 class Teacher(Human):
     name = 'Tom'
     species = 'Homosapien'
+    age = 30
+    specialty = 'German'
     
   
     
     def teaching(self):
         msg = "\nSpends most of the day teaching their students about the world and how to succeed in it."
-        print(msg)
+        return msg
         
 # Child class instance
 class Student(Human):
     name = 'Fred'
     species = 'Homosapien'
     major = 'Biology'
+    minor = 'History'
 
     
     def study(self):
@@ -39,12 +42,12 @@ if __name__ == "__main__":
     
      teacher = Teacher()
      
-     print(teacher.teaching())
      print(teacher.information())
+     print(teacher.teaching())
     
      
 
      student = Student()
      
-     print(student.study())
      print(student.information())
+     print(student.study())
