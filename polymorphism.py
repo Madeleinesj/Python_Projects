@@ -10,6 +10,10 @@ class Human():
         msg = "\nName: {},\nSpecies: {}\nLegs: {}\nArms: {}\nOrigin: {}".format(self.name,self.species,self.legs,self.arms,self.origin)
         return msg
 
+    def Nerd(self):
+        msg = "Are big fans of Doctor Who."
+        print(msg)
+
    
 
 # Child class instance
@@ -44,6 +48,7 @@ if __name__ == "__main__":
      
      print(teacher.information())
      print(teacher.teaching())
+     print(teacher.Nerd())
     
      
 
@@ -51,3 +56,4 @@ if __name__ == "__main__":
      
      print(student.information())
      print(student.study())
+     print(student.Nerd())
