@@ -7,12 +7,10 @@ class Human():
     origin = "Earth"
 
     def information(self):
-        msg = "\nName: {},\nSpecies: {}\nLegs: {}\nArms: {}\nOrigin: {}".format(self.name,self.species,self.legs,self.arms,self.origin)
+        msg = "\nName: {},\nSpecies: {}\nLegs: {}\nArms: {}".format(self.name,self.species,self.legs,self.arms)
         return msg
 
-    def Nerd(self):
-        msg = "Are big fans of Doctor Who."
-        print(msg)
+   
 
    
 
@@ -25,8 +23,8 @@ class Teacher(Human):
     
   
     
-    def teaching(self):
-        msg = "\nSpends most of the day teaching their students about the world and how to succeed in it."
+    def information(self):
+        msg = "{}, age {}, spends most of the day teaching their students about the world and how to succeed in it. Their speciality is {} ".format(self.name,self.age,self.specialty)
         return msg
         
 # Child class instance
@@ -37,8 +35,8 @@ class Student(Human):
     minor = 'History'
 
     
-    def study(self):
-        msg = "\nWorks day and night on homework to ace final exam!"
+    def information(self):
+        msg = "{}, {} major, works day and night on homework to ace their final exam!".format(self.name, self.major)
         print(msg)
 
 
@@ -47,13 +45,13 @@ if __name__ == "__main__":
      teacher = Teacher()
      
      print(teacher.information())
-     print(teacher.teaching())
-     print(teacher.Nerd())
+     
+     
     
      
 
      student = Student()
      
      print(student.information())
-     print(student.study())
-     print(student.Nerd())
+     
+     
