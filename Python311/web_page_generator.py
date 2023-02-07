@@ -18,10 +18,10 @@ class ParentWindow(Frame):
         self.customtext_btn.grid(row=2, column=1, padx=(50, 50), pady=(200, 15))
 
         #Creates textbox for custom text
-        entry = Entry(master, width= 42)
-        entry.place(relx= .5, rely= .5, anchor= CENTER)
-        label= Label(root, text="", font=("Helvetica 13"))
-        label.config(text= entry.get(), font= ('Helvetica 13'))
+        self.entry = Entry(master, width= 42)
+        self.entry.grid(row=2, column=2, padx=(10, 40), pady=(10,15))
+        label= Label(root, text="Enter custom text or click the Default HTML page button", font=("Helvetica 13"))
+        label.grid(row=1, column=2, padx=(10, 40), pady=(10,15))
         #Label is not rendering on the window
         L1 = Label(master, text="Enter custom text or click the Default HTML page button")
         
@@ -38,7 +38,7 @@ class ParentWindow(Frame):
 
         #customtext function
     def customHTML(self):
-        entry = ""
+        entry = self.entry.get()
         htmlFile = open("index.html", "w")
         htmlContent = "<html>\n<body>\n<h1>" + entry + "</h1>\n</body>\n</html>"
         htmlFile.write(htmlContent)
