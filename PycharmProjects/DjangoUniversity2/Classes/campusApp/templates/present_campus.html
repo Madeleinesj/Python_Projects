@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block title %}University Campus{% end-block %}
+{% block header %}Campus Details{% end-block %}
+
+
+
+{% block content %}
+
+
+<div class="admin_panel">
+    <form method="POST" id="CampusForm" action="../details/">
+        <table>
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_table }}
+        </table>
+        <div class="frmBtn_container">
+            <input type="submit">
+            <div class="frmBtn_container">
+                <a href="../{{ form.pk }}delete/"><button class="btn" type="button">DELETE</button></a>
+                <a href="{% url 'admin_console' %}"><button class="btn" type="button">CANCEL</button></a>
+                <a href="{% url 'admin_console' %}"><button class="btn" type="button">SUBMIT</button></a>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+
+
+
+{% end-block %}
