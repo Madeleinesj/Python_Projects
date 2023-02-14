@@ -12,7 +12,7 @@ class UniversityClasses(models.Model):
     object = models.Manager()
 
     #Displays the object output values in the form of a string
-    def __str_(self):
+    def __str__(self):
         # Returns the input value of the title and instructor name
         # field as a tuple to display in the browser instead of the default titles
         display_course = '{0.title}: {0.instructor_name}'
