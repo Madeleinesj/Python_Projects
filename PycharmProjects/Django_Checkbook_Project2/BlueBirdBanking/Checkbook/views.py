@@ -9,7 +9,7 @@ def home(request):
     # Checks if request method is POST
     if request.method == 'POST':
         pk = request.POST['account']  # If the form is submitted, retrieve which account the user wants to view
-        return redirect('index')  # Returns user back to homepage
+        return balance(request, pk)  # Returns user back to homepage
     content = {'form': form}  # Saves content to the template as a dictionary
     # adds content of form to page
     return render(request, 'checkbook/index.html', content)
